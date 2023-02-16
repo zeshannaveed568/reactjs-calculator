@@ -4,10 +4,10 @@ export const Container = styled.div`
   display: grid;
   justify-content: center;
   align-content: center;
-  width: 400px;
+  width: 800px;
   margin: 40px auto;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
   box-shadow: 2px 2px 10px #333;
   border-radius: 10px;
 `;
@@ -46,21 +46,11 @@ export const Button = styled.button`
     background-color: rgba(255, 255, 255, 0.9);
   }
 
-  ${"" /* ${"" /* Expanded form Example */}
-
-  ${function ({ gridSpan }) {
-    if (gridSpan) {
-      return `grid-column: span ${gridSpan};`;
-    }
-  }} */}
-
-    ${"" /* Shorthand form Example */}  
-    ${({ gridSpan }) => gridSpan && `grid-column: span ${gridSpan};`}
-    ${({ operation }) => operation && `background-color: gray};`}
+  ${({ gridSpan }) => gridSpan && `grid-column: span ${gridSpan};`}
+  ${({ operation }) => operation && `background-color: gray};`}
     ${({ controls }) => controls && `background-color: skyblue};`}
     ${({ equals }) =>
-      equals && `border-bottom-right-radius: 10px; background-color: gray};`}
+    equals && `border-bottom-right-radius: 10px; background-color: gray};`}
       ${({ period }) =>
-        period &&
-        `border-bottom-left-radius: 10px; background-color: skyblue};`}
+    period && `border-bottom-left-radius: 10px; background-color: skyblue};`}
 `;
